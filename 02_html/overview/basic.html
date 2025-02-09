@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><!-- lang Sprache vom Inhalt (hier en: English)-->
+
+<head>
+    <!-- head: Meta Informationen werden nicht in der Seite an -->
+
+    <!-- Zeichenkodierung (am besten immer UTF-8 nutzen)  -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport ist das sichtbare Fenster im Browser. Info wird für Mobile Devices benötigt. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- WICHTIG: Titel der Seite wird im Tab angezeigt-->
+    <title>Overview</title>
+
+    <!-- Mit link wird ein Stylesheet (CSS) eingebunden. Dazu später mehr -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- body: Hier der sichtbare Teil der Seite -->
+    <h1>Überschrift</h1><!-- Suchmaschinen erwarten genau eine <h1> auf der Webseite -->
+    <h2>Unterüberschrift</h2>
+    <h3>Unterunterüberschrift</h3>
+    <h4>Unterunterunterüberschrift</h4>
+    <h5>Unterunterunterunterüberschrift</h5>
+    <h6>Unterunterunterunterunterüberschrift</h6>
+
+    <p>Dieser Text is ein Paragraph</p>
+    <p>Ein weiterer Paragraph. <em>Dieser Text ist betont.</em><strong>Dieser Text ist
+            hervorgehoben.</strong><span>Dieser Text ist Extra gekennzeichnet (hier momentan ohne Style).</span></p>
+    <p>Paragraph mit <br />Umbruch</p>
+
+    <div>
+        Ein Inhaltsbereich (hier momentan ohne Style)
+        <div>Es kann weitere Inhaltsbereiche beinhalten</div>
+        <p>und auch andere Tags</p>
+    </div>
+    <!-- Ihr seht das "span" nicht umbricht (inline), "div" jedoch schon (block) -->
+
+    <a href="https://www.lbs-gg.de/">Ein Hyperlink zur Seite der Luise-Büchner-Schule</a>
+
+    <ul>
+        <li>Ich</li>
+        <li>bin</li>
+        <li>eine Stichpunktenliste</li>
+    </ul>
+
+    <ol>
+        <li>Eins</li>
+        <li>Zwei</li>
+        <li>oder Drei</li>
+    </ol>
+
+    <h2>Bilder</h2>
+    <!-- Bilder (img) sind "inline-block", d.h. die nehmen Platz ein, erwzingen aber keinen Umbruch -->
+
+    Das hier ist ein Bild <img src="aomori.jpg" alt="Bild aus Aomori" />aus Aomori, Japan. Hier leider kein Effect, da
+    nicht in CSS unterstützt.
+
+
+    <h2>Tabelle</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tabellenkopf Spalte 1</th>
+                <th>Tabellenkopf Spalte 2</th>
+            </tr>            
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alpha</td>
+                <td>Beta</td>
+            </tr>
+            <tr>
+                <td>Gamma</td>
+                <td>Delta</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Formulare</h2>
+    <p>Formulare werden verwendet um Daten an den Server zu versenden oder mit der Seite zu interagieren. Hier haben sie noch keine Funktion.</p>
+    <p>Hier musste ich einige Styles setzen, sonst werden alle Elemente nebeneinander dargestellt.</p>
+
+    <form>
+        <select>
+            <option>Alpha</option>
+            <option>Beta</option>
+        </select>
+        
+        <input type="input" placeholder="input" />
+                
+        <label><input type="radio" name="r1" value="A" />Option A</label>
+        <label><input type="radio" name="r1" value="B" />Option B</label>
+
+        <label><input type="checkbox" name="c1" value="X" />Option C</label>
+        <label><input type="checkbox" name="c1" value="Y" />Option Y</label>
+
+        <button>Ein Knopf</button>
+    </form>
+
+
+</body>
+
+</html>

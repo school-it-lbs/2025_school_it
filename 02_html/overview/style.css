@@ -1,0 +1,173 @@
+*
+{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --color1: #FF3030;
+    --color2: #FF9B30;
+    --color3: #06D6A0;
+    --color4: #3094FF;
+    --color5: #FF30FC;
+}
+
+*{
+    border: 1px solid transparent;
+}
+
+body :hover{        
+    position: relative;    
+    border-radius: 1px;
+    border: solid 1px currentColor;
+    background: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+body :hover::after{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    font-weight: normal;
+    font-size: 12px;
+    z-index: 100;
+    background-color: aquamarine;
+    border: black 1px solid;
+    color: black; 
+}
+
+h1:hover{
+    color: var(--color1);    
+}
+h1:hover::after{
+    content: "<h1></h1>";
+}
+
+h2:hover{
+    color: var(--color2);    
+}
+h2:hover::after{
+    content: "<h2></h2>";
+}
+
+h3:hover{
+    color: var(--color3);    
+}
+h3:hover::after{
+    content: "<h3></h3>";
+}
+
+h4:hover{
+    color: var(--color4);    
+}
+h4:hover::after{
+    content: "<h4></h4>";
+}
+
+h5:hover{
+    color: var(--color5);    
+}
+h5:hover::after{
+    content: "<h5></h5>";
+}
+
+h6:hover{
+    color: var(--color1);    
+}
+h6:hover::after{
+    content: "<h6></h6>";
+}
+
+p:hover{
+    color: var(--color2);    
+}
+p:hover::after{
+    content: "<p></p>";
+}
+
+em:hover{
+    color: var(--color3);    
+}
+em:hover::after{
+    content: "<em></em>";
+}
+
+strong:hover{
+    color: var(--color4);    
+}
+strong:hover::after{
+    content: "<strong></strong>";
+}
+
+span:hover{
+    color: var(--color5);    
+}
+span:hover::after{
+    content: "<span></span> display: inline";
+}
+
+div:hover{
+    color: var(--color1);    
+}
+div:hover::after{
+    content: "<div></div> display: block";
+}
+
+a:hover{
+    color: var(--color2);    
+}
+a:hover::after{
+    content: "<a></a>";
+}
+
+ul:hover{
+    color: var(--color3);    
+}
+ul:hover::after{
+    content: "<ul></ul>";
+}
+
+li:hover{
+    color: var(--color4);    
+}
+li:hover::after{
+    content: "<li></li>";
+}
+
+ol:hover{
+    color: var(--color4);    
+}
+ol:hover::after{
+    content: "<ol></ol>";
+}
+
+table:hover{
+    color: var(--color5);    
+}
+table:hover::after{
+    content: "<table></table>";
+}
+
+th:hover{
+    color: var(--color1);    
+}
+th:hover::after{
+    content: "<th></th>";
+}
+
+td:hover{
+    color: var(--color2);    
+}
+td:hover::after{
+    content: "<td></td>";
+}
+
+form{
+    margin-bottom: 300px;
+}
+
+form > * {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+}

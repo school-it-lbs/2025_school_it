@@ -1,0 +1,39 @@
+
+body{
+	background: 
+	linear-gradient(217deg,#0769ED,rgba(219, 50, 50, 0) 70.71%),
+	linear-gradient(127deg, #0DF75A, rgba(0, 255, 128, 0) 70.71%),
+	linear-gradient(70deg, #F00CA3, rgb(0 0 255 / 0%) 70.71%),
+	linear-gradient(336deg, #F1A808, rgb(0 0 255 / 0%) 70.71%);
+
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	box-sizing: border-box;
+	color: white;
+}
+
+div.main
+{
+	margin: 0 auto;
+	display: grid;
+	gap: 1rem;
+	max-width: 800px;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+div.main > * {
+	grid-column: 1 / -1;
+}
+
+div.main > h1 {
+	text-shadow: 5px 4px 8px rgba(181,171,165,0.73);
+
+}
+
+img {
+	border: solid 10px white;
+	max-width: 640px;
+}

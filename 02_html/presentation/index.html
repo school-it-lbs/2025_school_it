@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Softwareentwicklung - HTML</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="script/remark-latest.min.js" defer></script>
+    <script src="script/custom.js" defer></script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# > Softwareentwicklung
+## 2025-02-10
+### Gregory Orchard
+
+---
+class: center, middle, inverse
+# <span class="html">HTML</span> + <span class="css">CSS</span> + <span class="js">JS</span>
+## BAUSTEINE EINER INTERNETSEITE
+
+---
+
+## <span class="html">HTML</span>
+_HyperText Markup Language_  
+Dokument beschreibt __Inhalt__ und __Struktur__ der Webseite.  
+Hyperlinks verknüpfen Dokumente.
+
+## <span class="css">CSS</span>
+_Cascading Style Sheets_  
+Beschreibt das __Aussehen__ der Website.
+
+## <span class="js">JS</span>
+_JavaScript_  
+Programmiersprache für __Interaktivität__ auf der Webseite.
+
+---
+class: center, middle
+![html](images/HTML5_logo_and_wordmark.svg)
+
+---
+
+class: center, middle
+# Hypertext
+
+![hyper](images/hypertext.png)
+
+---
+
+# Code Beispiel
+
+.flex-column-25[
+## Text 
+```
+Luise-Büchner-Schule
+in Groß-Gerau
+zur Webseite:  
+https://www.lbs-gg.de/
+```
+]
+
+.flex-column-50[
+## <span class="html">HTML</span>
+
+```html
+<h3>Luise-Büchner-Schule</h3>
+<p>in Groß-Gerau</p>
+<p>zur Webseite:<br /> 
+   <a href="https://www.lbs-gg.de/">  
+      lbs-gg.de
+   </a>
+</p>
+```
+
+]
+
+
+.flex-column-25[
+## Render
+
+__Luise-Büchner-Schule__  
+in Groß-Gerau  
+zur Webseite:  
+[lbs-gg.de](https://www.lbs-gg.de/)
+
+]
+
+
+
+---
+
+
+# <span class="html">HTML</span>-Elemente
+
+HTML verwendet sogenannte "Tags"
+
+- Umschlossen mit Start-Tag <span class="html">`<h1>`</span> und Ende-Tag <span class="html">`</h1>`</span> _oder_
+- "self-closing" Tags, z.B. <span class="html">`<img src="image.png" alt="Ein Bild" />`</span>
+
+```html
+
+<h1>Eine Überschrift</h1>
+
+<img src="image.png" alt="Ein Bild" />
+
+<div id="theBox">
+	<p><span class="special">Hello</span> World!</p>
+</div>
+
+```
+
+
+
+---
+
+# <span class="html">HTML</span> Seitenstruktur 
+
+
+.flex-column-75[
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+	  <title>Eine Webseite</title>
+	  <!-- unsichtbare optionale Meta-Informationen -->
+	  ...
+   </head>
+   <body>		
+	  <!-- sichtbarer Inhalt -->
+	  <p>Hello World!</p>
+	  ...
+   </body>
+</html>
+```
+]
+
+.flex-column-25[
+Dokument hat eine Baumstruktur  
+  
+.compact[  
+- `<html>`
+	- `<head>`
+		- `<title>`
+		- ...
+	- `<body>`
+		- `<p>`
+		- ...
+]
+
+]
+
+---
+
+# Browser Tools
+
+1. Browser öffnen (Chrome, Edge, Firefox) <mark>__nicht__ Internet Explorer (IE)</mark>
+2. Gehe zu [lbs-gg.de](https://www.lbs-gg.de/)
+3. Browser Tools öffnen → __F12__
+4. Im ersten Tab (_Elements | Inspector_) Dokumentenstruktur der Seite betrachten
+
+---
+
+# Weitere Informationen
+## MDN
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+    </textarea>
+    
+  </body>
+</html>
