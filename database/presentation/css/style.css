@@ -1,0 +1,168 @@
+:root{
+  --color1: #8ecae6;
+  --color2: #219ebc;
+  --color3: #023047;
+  --color4: #ffb703;
+  --color5: #fb8500;
+  
+  
+  --colorHTML: #F2672C;
+  --colorCSS: #30AADD;
+  --colorJS: #F1C026;
+  --colorDB: #0fbb51;
+  
+  --colorCssSelector: #d4b258;
+  --colorCssAttribute: #7cd9fa;
+  --colorCssValue: #cc723a;
+}
+
+@font-face {
+    font-family: 'League Gothic';    
+    src: url('../font/league-gothic.woff') format('woff'),
+         url('../font/league-gothic.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+  font-family: Tahoma, sans-serif;  
+  line-height: 28px;
+}
+
+h1,
+h2,
+h3, 
+h4,
+h5 {  
+  font-weight: normal;
+  line-height: 0.8em;
+  font-family: League Gothic, Impact, sans-serif;  
+  color: var(--color3);
+}
+
+li{
+  padding-top: 20px;
+}
+
+
+table {
+  border: solid 2px black;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+}
+
+table td {
+  border: solid 1px black;
+  padding: 10px;
+}
+
+.inverse {
+  background: var(--color3);
+  color: white;
+  text-shadow: 0 0 20px #333;
+}
+
+.inverse h1{
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.inverse h2{
+  color: white;
+}
+
+.inverse h3{
+  color: white;
+}
+
+
+/* Two-column layout */
+.left-column {
+width: 50%;
+float: left;
+}
+
+.right-column {
+width: 50%;
+float: right;
+}
+
+/* Three-columg layout */
+.third-column {
+width: 30%;
+float: left;
+margin-right: 30px;
+}
+
+
+blockquote{
+border-left: 10px solid var(--color1);
+padding-left: 20px;
+}
+
+
+
+img {
+	max-width: 50%;	
+}
+
+.html{
+	color: var(--colorHTML);
+}
+
+.css{
+	color: var(--colorCSS);
+}
+
+.js{
+	color: var(--colorJS);
+}
+
+.db{
+	color: var(--colorDB);
+}
+
+.css-s{
+	color: var(--colorCssSelector);	
+}
+
+.css-a{
+	color: var(--colorCssAttribute);	
+}
+
+.css-v{
+	color: var(--colorCssValue);	
+}
+
+code {
+	position: relative;
+}
+
+code.html{
+	border: solid 1px var(--colorHTML);	
+}
+
+code.html::before{
+	content: "html";
+	font-size: 10px;
+	color: var(--colorHTML);
+	position: absolute;
+	right: 4px;
+	top: -6px;
+}
+
+code.css{
+	border: solid 1px var(--colorCSS);	
+}
+
+code.css::before{
+	content: "css";
+	font-size: 10px;
+	color: var(--colorCSS);
+	position: absolute;
+	right: 4px;
+	top: -6px;
+}

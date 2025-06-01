@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toolkit Computer - HTML</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="script/remark-latest.min.js" defer></script>
+    <script src="script/custom.js" defer></script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+# <span class="db">Datenbanken</span>
+## Elektronische Datenverwaltung
+
+---
+
+## <span class="db">Datenbanken</span>
+Eine Datenbank ist ein System zur elektronischen Datenverwaltung.
+
+Aufgaben:
+
+- große Datenmengen speichern
+- effizient ablegen
+- durchsuchbar machen
+- Ergebnisse nach Anforderung anzeigen
+
+---
+
+## <span class="db">Tabellen</span>
+Tabellen bekannt aus Anwendungen wie Excel oder LibreOffice
+
+![html](images/table.png)
+
+_keine Datenbank!_
+
+---
+
+## <span class="db">Relationale Datenbank</span>
+
+
+![html](images/relation-database.png)
+
+Datentabellen haben relationale Beziehungen untereinander
+
+Hier im Beispiel:  
+
+__id__ ist der Hauptschlüssel für jede Tabellen  
+__role_id__ ist ein Fremdschlüssel auf die Tabelle roles
+
+---
+
+
+## <span class="db">Datenbanksysteme</span>
+
+.left-column[
+### Server
+
+- MySQL / MariaDB
+- Oracle
+- PostgreSQL
+- SQL Server
+
+]
+
+.right-column[
+### Datei basierend 
+
+- SQlite
+]
+
+---
+
+class: center, middle, inverse
+# <span class="db">SQL</span>
+## Abfragesprache
+
+
+---
+
+## <span class="db">SQL</span>
+
+### Structured Query Language 
+
+_Aussprache:_ S-Q-L oder "sequel"
+
+Mit dieser Sprache sagen wir __was__ wir gerne hätten, aber nicht __wie__ es umgesetzt werden soll
+
+
+### CRUD
+
+- Create: <span class="db">INSERT</span>
+- Read: <span class="db">SELECT</span>
+- Update: <span class="db">UPDATE</span> 
+- Delete: <span class="db">DELETE</span>
+
+---
+
+## <span class="db">Beispiel Tabelle</span>
+
+### users
+
+| id | name  | age |
+| :- | :---  | :-- |
+| 1  | Bob   | 20 |
+| 2  | Jane  | 22 |
+| 3  | Frank | 17 |
+| 4  | Linda | 19 |
+
+---
+
+## <span class="db">SELECT (read)</span>
+
+.third-column[
+
+```sql
+SELECT id, name, age 
+FROM users
+
+--or
+
+SELECT * 
+FROM users
+```
+| id | name  | age |
+| :- | :---  | :-- |
+| 1  | Bob   | 20 |
+| 2  | Jane  | 22 |
+| 3  | Frank | 17 |
+| 4  | Linda | 19 |
+
+]
+
+.third-column[
+
+```sql
+SELECT name, age 
+FROM users
+ORDER BY name
+```
+| name  | age |
+| :---  | :-- |
+| Bob   | 20 |
+| Frank | 17 |
+| Jane  | 22 |
+| Linda | 19 |
+
+]
+
+.third-column[
+
+```sql
+SELECT name 
+FROM users 
+WHERE age > 18
+```
+| name  | age |
+| :---  | :-- |
+| Bob   | 20 |
+| Jane  | 22 |
+| Linda | 19 |
+
+]
+
+---
+
+## <span class="db">INSERT (create)</span>
+
+```sql
+INSERT INTO users
+VALUES (5, 'Cassandra', 24)
+```
+
+```sql
+SELECT * 
+FROM users
+```
+| id | name  | age |
+| :- | :---  | :-- |
+| 1  | Bob   | 20 |
+| 2  | Jane  | 22 |
+| 3  | Frank | 17 |
+| 4  | Linda | 19 |
+| 5  | Cassandra | 24 |
+
+---
+
+## <span class="db">UPDATE</span>
+
+```sql
+UPDATE users
+SET age = 18
+WHERE id = 5
+```
+
+```sql
+SELECT * 
+FROM users
+WHERE id = 5
+```
+| id | name  | age |
+| :- | :---  | :-- |
+| 5  | Cassandra | 18 |
+
+---
+
+## <span class="db">DELETE</span>
+
+```sql
+DELETE FROM users
+WHERE id = 5
+```
+
+_! Daten werden permanent gelöscht !_
+
+    </textarea>
+    
+  </body>
+</html>
